@@ -3,6 +3,8 @@
 
 This plugin is based off of the plugin by Tzury Bar Yochay: [jQuery.hotkeys](http://github.com/tzuryby/hotkeys)
 
+--- 
+
 The syntax is as follows:
 
     $(expression).bind(types.keys, handler);

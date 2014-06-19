@@ -10,6 +10,9 @@
  * Binny V A, http://www.openjs.com/scripts/events/keyboard_shortcuts/
 */
 
+var jQuery  = require('jquery');
+module.exports = jQuery;
+
 (function(jQuery){
 
 	jQuery.hotkeys = {
@@ -58,7 +61,7 @@
 			// Don't fire in text-accepting inputs that we didn't directly bind to
 			// important to note that $.fn.prop is only available on jquery 1.6+
 			if ( this !== event.target && (/textarea|select/i.test( event.target.nodeName ) ||
-				event.target.type === "text" || $(event.target).prop('contenteditable') == 'true' )) {
+				event.target.type === "text" || jQuery(event.target).prop('contenteditable') == 'true' )) {
 				return;
 			}
 
