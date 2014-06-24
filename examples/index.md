@@ -9,9 +9,8 @@
 ````
 
 ````javascript
-seajs.use('index', function(Keeyer) {
-  console.log(Keeyer);
-  Keeyer(document).on('keydown', '.input,#input', 'ctrl+return', function(e) {
+seajs.use(['index','jquery'], function(Kemo,$) {
+  Kemo(document).on('keydown', '.input,#input', 'ctrl+return', function(e) {
     alert('ctrl+enter normal');
   }).on('keydown', null, 'up', function(e) {
     e.preventDefault();
@@ -20,7 +19,7 @@ seajs.use('index', function(Keeyer) {
     e.preventDefault();
     console.log('down');
   })
-  Keeyer('#input').before('<input class="input" placeholder="ctrl+enter 2"/>');
-  Keeyer('#input').before('<input class="input" placeholder="ctrl+enter 3"/>');
+  $('#input').before('<input class="input" placeholder="ctrl+enter 2"/>');
+  $('#input').before('<input class="input" placeholder="ctrl+enter 3"/>');
 });
 ````
